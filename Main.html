@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced UI Layout</title>
+    <style>
+        /* Basic Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for the iframe layout */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Top section */
+        .top {
+            height: 25%;
+            background-color: #ff5722;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Main content section with left and right columns */
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Left column */
+        .left {
+            width: 25%;
+            background-color: #f1f1f1;
+            border-right: 2px solid #ddd;
+        }
+
+        /* Right column */
+        .right {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        /* Styling for the iframe elements */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Responsive behavior for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .main {
+                flex-direction: column;
+            }
+
+            .left {
+                width: 100%;
+                height: 200px; /* Adjust size for mobile view */
+            }
+
+            .right {
+                height: calc(100vh - 25% - 200px); /* Adjust for smaller screen */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Section -->
+        <div class="top">
+            <iframe src="top.html" name="top" scrolling="no"></iframe>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main">
+            <!-- Left Column -->
+            <div class="left">
+                <iframe src="left.html" name="left" scrolling="no"></iframe>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right">
+                <iframe src="right.html" name="right" scrolling="auto"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

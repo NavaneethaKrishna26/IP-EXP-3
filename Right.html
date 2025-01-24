@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Book Storage</title>
+  <style>
+    /* Global Styles */
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0044cc;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      background-color: #0044cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #002a80;
+    }
+  </style>
+</head>
+<body>
+  <!-- Content Section -->
+  <h2>Welcome to Online Book Storage</h2>
+  <p>
+    Press <b>Login</b> if you already have an account.  
+    Otherwise, press <b>Register</b> to create a new account.
+  </p>
+
+  <!-- Buttons Section -->
+  <div class="buttons">
+    <button onclick="location.href='login.html'">Login</button>
+    <button onclick="location.href='registration.html'">Register</button>
+  </div>
+</body>
+</html>

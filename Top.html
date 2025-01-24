@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Storage</title>
+    <style>
+        /* Basic Reset */
+        body, h1 {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background and layout */
+        body {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Container for the heading */
+        .heading-container {
+            background-color: #ffcccb;
+            border-radius: 10px;
+            padding: 20px 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* Styling for heading text */
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-decoration: underline;
+            color: #e91e63;
+            margin: 0;
+        }
+
+        /* Smooth scrolling effect */
+        .scrolling-text {
+            display: inline-block;
+            white-space: nowrap;
+            
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Keyframes for the scrolling text */
+        @keyframes scroll-text {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heading-container">
+        <h1><span class="scrolling-text">ONLINE BOOK STORAGE</span></h1>
+    </div>
+
+</body>
+</html>

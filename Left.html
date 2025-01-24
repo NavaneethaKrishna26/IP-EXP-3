@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Book Storage Navigation</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      width: 250px;
+      background-color: #343a40;
+      height: 100vh;
+      padding-top: 20px;
+      position: fixed;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 20px 0;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      display: block;
+      transition: background-color 0.3s, padding-left 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #495057;
+      padding-left: 30px;
+    }
+
+    main {
+      margin-left: 270px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="login.html" target="right">Login</a></li>
+      <li><a href="profile.html" target="right">User Profile</a></li>
+      <li><a href="catalog.html" target="right">Books Catalog</a></li>
+      <li><a href="scart.html" target="right">Shopping Cart</a></li>
+      <li><a href="payment.html" target="right">Payment</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Welcome to Online Book Storage</h1>
+    <p>Select an option from the navigation menu.</p>
+  </main>
+</body>
+</html>

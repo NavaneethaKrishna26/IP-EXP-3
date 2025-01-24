@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration - Online Book Storage</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .registration-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .registration-container h2 {
+      text-align: center;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .form-group input:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form-actions button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-actions button[type="submit"] {
+      background-color: #28a745;
+      color: #ffffff;
+    }
+
+    .form-actions button[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    .form-actions button[type="reset"] {
+      background-color: #dc3545;
+      color: #ffffff;
+    }
+
+    .form-actions button[type="reset"]:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <div class="registration-container">
+    <h2>Registration</h2>
+    <form name="registrationForm" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address">
+      </div>
+      <div class="form-group">
+        <label for="phone">Contact Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your contact number">
+      </div>
+      <div class="form-group">
+        <label for="loginId">Login ID</label>
+        <input type="text" id="loginId" name="loginId" placeholder="Choose a login ID">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Choose a password">
+      </div>
+      <div class="form-actions">
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      const name = document.forms['registrationForm']['name'].value.trim();
+      const address = document.forms['registrationForm']['address'].value.trim();
+      const phone = document.forms['registrationForm']['phone'].value.trim();
+      const loginId = document.forms['registrationForm']['loginId'].value.trim();
+      const password = document.forms['registrationForm']['password'].value.trim();
+
+      if (!name || !address || !phone || !loginId || !password) {
+        alert('All fields must be filled out.');
+        return false;
+      }
+
+      const phonePattern = /^\d{10}$/;
+      if (!phonePattern.test(phone)) {
+        alert('Contact Number must be a 10-digit number.');
+        return false;
+      }
+
+      const loginIdPattern = /^[A-Za-z][A-Za-z0-9_]{5,29}$/;
+      if (!loginIdPattern.test(loginId)) {
+        alert('Login ID must start with a letter and be 6-30 characters long, containing only letters, numbers, and underscores.');
+        return false;
+      }
+
+      const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+      if (!passwordPattern.test(password)) {
+        alert('Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number.');
+        return false;
+      }
+
+      alert('Registration successful!');
+      window.location.href = 'login.html';
+      return false; // Prevent actual form submission for demonstration
+    }
+  </script>
+</body>
+</html>
